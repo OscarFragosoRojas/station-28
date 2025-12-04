@@ -1,0 +1,12 @@
+---
+const { src, alt } = Astro.props;
+---
+
+<div class="flex items-center gap-2">
+  <img src={src} alt={alt} class="w-16" />
+  <p
+    class="hover-anim text-moto-white font-bold text-2xl tracking-tighter uppercase italic transform -skew-x-12"
+  >
+    LA ESTACION<span class="text-moto-red"> VEINTIOCHO</span>
+  </p>
+</div>

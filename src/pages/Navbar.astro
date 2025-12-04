@@ -1,0 +1,106 @@
+---
+import ButtonComponent from "../components/ui/button-component.astro";
+import AComponent from "../components/ui/a-component.astro";
+import MenuItemsMobile from "../components/ui/menu-items-mobile.astro";
+import LogoComponent from "../components/ui/logo-component.astro";
+---
+
+<nav
+  class="bg-moto-black/95 backdrop-blur-sm fixed w-full z-50 border-b border-moto-red/20"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <LogoComponent src="/logo.png" alt="Logo" />
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:block">
+        <div class="ml-10 flex items-baseline space-x-8">
+          <AComponent href="#hero" name="Inicio" />
+          <AComponent href="#menu" name="Menú" />
+          <AComponent href="#promos" name="Promos" />
+          <AComponent href="#contact" name="Nosotros" />
+          <ButtonComponent href="#contact" name="ORDENAR" />
+        </div>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="-mr-2 flex md:hidden">
+        <button
+          type="button"
+          class="bg-moto-dark-gray inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          id="mobile-menu-btn"
+        >
+          <!-- Icon when menu is closed -->
+          <svg
+            class="block h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <!-- Icon when menu is open -->
+          <svg
+            class="hidden h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    class="hidden md:hidden bg-moto-black border-b border-moto-red/20"
+    id="mobile-menu"
+  >
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <MenuItemsMobile href="#hero" name="Inicio" />
+      <MenuItemsMobile href="#menu" name="Menú" />
+      <MenuItemsMobile href="#promos" name="Promos" />
+      <MenuItemsMobile href="#contact" name="Ordenar" />
+    </div>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById("mobile-menu-btn");
+  const menu = document.getElementById("mobile-menu");
+  const icons = btn?.querySelectorAll("svg");
+
+  btn?.addEventListener("click", () => {
+    menu?.classList.toggle("hidden");
+    icons?.forEach((icon) => icon.classList.toggle("hidden"));
+    icons?.forEach((icon) => icon.classList.toggle("block"));
+  });
+
+  // Motion integration example
+  import { animate, stagger } from "motion";
+
+  animate(
+    ".hover-anim",
+    { opacity: [0, 1], y: [-20, 0] },
+    { delay: stagger(0.1), duration: 0.5 }
+  );
+</script>
