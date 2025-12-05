@@ -1,4 +1,5 @@
 import type { MenuSection } from "../types";
+import type { PromoSection } from "../types";
 import burger1 from "../assets/images/burger-1.jpeg";
 
 export const menuItems: MenuSection[] = [
@@ -19,7 +20,7 @@ export const menuItems: MenuSection[] = [
                 subtitle: "Hawaiana",
                 src: burger1,
                 alt: "Hamburguesa Triumph",
-                tags: ["Triumph", "Carne de Res", "Queso Americano","Jamón Crujiente", "Piña", "Papas Fritas"],
+                tags: ["Triumph", "Carne de Res", "Queso Americano", "Jamón Crujiente", "Piña", "Papas Fritas"],
                 price: "139",
                 description: "100% carne de res, piña, jamón crujiente, lechuga, queso americano, quesillo, jitomate, cebolla morada, pepinillos, picante, mayonesa y papas fritas.",
             },
@@ -41,7 +42,7 @@ export const menuItems: MenuSection[] = [
                 price: "165",
                 description: "100% carne de res, doble carne, lechuga,doble queso americano, quesillo, jitomate, cebolla morada, pepinillos, picante, mayonesa y papas fritas.",
             },
-        ],    
+        ],
     },
     {
         name: "Wings & Wheels",
@@ -55,7 +56,7 @@ export const menuItems: MenuSection[] = [
                 price: "120",
                 description: "Doble carne, queso cheddar, tocino crujiente y salsa BBQ casera.",
             },
-        ],    
+        ],
     },
     {
         name: "Para compartir",
@@ -69,7 +70,7 @@ export const menuItems: MenuSection[] = [
                 price: "120",
                 description: "Doble carne, queso cheddar, tocino crujiente y salsa BBQ casera.",
             },
-        ],    
+        ],
     },
     {
         name: "Llena el tanque",
@@ -83,6 +84,23 @@ export const menuItems: MenuSection[] = [
                 price: "120",
                 description: "Doble carne, queso cheddar, tocino crujiente y salsa BBQ casera.",
             },
-        ],    
+        ],
+    }
+]
+
+export const promos: PromoSection[] = [
+    {
+        name: "Promo 1",
+        items: [
+            {
+                name: "La Chopper",
+                subtitle: "Doble Carne",
+                src: burger1,
+                alt: "Hamburguesa Chopper",
+                tags: ["Chopper", "Doble Carne", "Queso Cheddar", "Tocino", "Salsa BBQ"],
+                price: "120",
+                description: "Doble carne, queso cheddar, tocino crujiente y salsa BBQ casera.",
+            },
+        ],
     }
 ]

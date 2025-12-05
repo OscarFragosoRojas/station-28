@@ -12,3 +12,8 @@ export interface MenuSection {
   name: string;
   items: MenuItem[];
 }
+
+export interface PromoSection {
+  name: string;
+  items: MenuItem[];
+}
