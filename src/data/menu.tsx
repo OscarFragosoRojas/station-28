@@ -1,5 +1,6 @@
 import type { MenuSection } from "../types";
 import type { PromoSection } from "../types";
+import type { OrderSection } from "../types";
 import burger1 from "../assets/images/burger-1.jpeg";
 
 export const menuItems: MenuSection[] = [
@@ -104,3 +105,71 @@ export const promos: PromoSection[] = [
         ],
     }
 ]
+
+
+export const promos: PromoSection[] = [
+    {
+        name: "Hamburguesas",
+        promos: [
+            {
+                name: "Honda",
+                subtitle: "Promo Sencilla",
+                src: burger1,
+                alt: "Hamburguesa Honda",
+                price: "120",
+                description: "En la compra de 2 hamburguesas, la tercera va a mitad de precio.",
+            },
+            {
+                name: "Honda",
+                subtitle: "Promo Pareja",
+                src: burger1,
+                alt: "Hamburguesa Honda",
+                price: "120",
+                description: "En la compra de 2 hamburguesas, la tercera va a mitad de precio.",
+            },
+        ],
+    },
+    {
+        name: "Wings & Wheels",
+        promos: [
+            {
+                name: "Honda",
+                subtitle: "Promo Sencilla",
+                src: burger1,
+                alt: "Hamburguesa Honda",
+                price: "120",
+                description: "En la compra de 2 hamburguesas, la tercera va a mitad de precio.",
+            },
+            {
+                name: "Honda",
+                subtitle: "Promo Doble",
+                src: burger1,
+                alt: "Hamburguesa Honda",
+                price: "120",
+                description: "En la compra de 2 hamburguesas, la tercera va a mitad de precio.",
+            },
+        ],
+    }
+]
+
+export const order: OrderSection[] = [
+    {
+        title: "Ordena en línea",
+        url: "https://www.moto.com.mx/ordenar",
+        icon: "whatsapp",
+        description: "Doble carne, queso cheddar, tocino crujiente y salsa BBQ casera.",
+    },
+    {
+        title: "Visítanos",
+        url: "https://www.moto.com.mx/visitanos",
+        icon: "whatsapp",
+        description: "Doble carne, queso cheddar, tocino crujiente y salsa BBQ casera.",
+    },
+    {
+        title: "Envíanos un mensaje",
+        url: "https://www.moto.com.mx/envianos-un-mensaje",
+        icon: "whatsapp",
+        description: "Doble carne, queso cheddar, tocino crujiente y salsa BBQ casera.",
+    },
+]
+    

@@ -1,0 +1,12 @@
+---
+const { title, orientation } = Astro.props;
+---
+
+<div class="text-center mb-16" style={{ textAlign: orientation }}>
+  <h2
+    class="text-4xl font-bold text-moto-white uppercase tracking-tighter italic mb-4 decoration-red-500"
+  >
+    {title}
+    <div class="h-1 w-20 bg-moto-red mx-auto transform -skew-x-12"></div>
+  </h2>
+</div>

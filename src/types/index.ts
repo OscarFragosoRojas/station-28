@@ -3,7 +3,7 @@ export interface MenuItem {
   subtitle: string;
   src: any;
   alt: string;
-  tags: string[];
+  tags?: string[];
   price: string;
   description: string;
 }
@@ -15,5 +15,14 @@ export interface MenuSection {
 
 export interface PromoSection {
   name: string;
-  items: MenuItem[];
+  promos: MenuItem[];
+}
+
+export interface OrderSection {
+  title: string;
+  url: string;
+  src?: any;
+  alt?: string;
+  icon?: string;
+  description: string;
 }

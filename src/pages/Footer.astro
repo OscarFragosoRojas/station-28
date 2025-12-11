@@ -1,0 +1,40 @@
+---
+import Social from "../components/ui/social.astro";
+---
+
+<footer class="bg-moto-black">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="py-20">
+      <div class="flex flex-col sm:flex-row justify-between items-center">
+        <div class="mb-4 sm:mb-0">
+          <p
+            class="hover-anim text-moto-white font-bold text-xl tracking-tighter uppercase italic transform -skew-x-12 pr-2"
+          >
+            LA<span class="text-moto-red"> ESTACION </span>28
+          </p>
+        </div>
+        <div class="flex space-x-4">
+          <p class="text-moto-white">Siguenos en:</p>
+          <Social
+            platform="instagram"
+            username="la.estacion.28"
+            icon="instagram"
+            href="https://www.instagram.com/la.estacion.28?igsh=MW90NGg5bDByeHllZg=="
+          />
+          <Social
+            platform="facebook"
+            username="la.estacion.28"
+            icon="facebook"
+            href="https://www.facebook.com/share/1AGPGFdXHz/?mibextid=wwXIfr"
+          />
+          <Social
+            platform="tiktok"
+            username="la.estacion.28"
+            icon="tiktok"
+            href="https://www.tiktok.com/@la.estacion.28?_r=1&_t=ZS-91yeEFyG5fo"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

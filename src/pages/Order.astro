@@ -1,0 +1,28 @@
+---
+import PromoCard from "../components/ui/promo-card.astro";
+import { order } from "../data/menu";
+---
+
+<section id="order" class="py-20 bg-moto-dark">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2
+        class="text-4xl font-bold text-moto-white uppercase tracking-tighter italic mb-4"
+      >
+        Ordena en línea
+      </h2>
+      <div class="h-1 w-20 bg-moto-red mx-auto transform -skew-x-12"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {
+        order.map((order) => (
+          <PromoCard
+            icon={order.icon}
+            name={order.title}
+            description={order.description}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>
