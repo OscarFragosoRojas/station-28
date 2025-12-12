@@ -1,0 +1,14 @@
+---
+import { Icon } from "astro-icon/components";
+const { platform, username, icon, href } = Astro.props;
+const iconName = icon.includes(":") ? icon : `fa6-brands:${icon}`;
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="text-moto-white hover:text-moto-red transition-colors duration-300"
+>
+  <Icon name={iconName} class="size-6" />
+</a>
