@@ -91,24 +91,6 @@ export const menuItems: MenuSection[] = [
 
 export const promos: PromoSection[] = [
     {
-        name: "Promo 1",
-        items: [
-            {
-                name: "La Chopper",
-                subtitle: "Doble Carne",
-                src: burger1,
-                alt: "Hamburguesa Chopper",
-                tags: ["Chopper", "Doble Carne", "Queso Cheddar", "Tocino", "Salsa BBQ"],
-                price: "120",
-                description: "Doble carne, queso cheddar, tocino crujiente y salsa BBQ casera.",
-            },
-        ],
-    }
-]
-
-
-export const promos: PromoSection[] = [
-    {
         name: "Hamburguesas",
         promos: [
             {
