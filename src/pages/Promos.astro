@@ -1,33 +1,14 @@
 ---
 import { promos } from "../data/menu";
-import PromoCard from "../components/ui/promo-card.astro";
 import TitleSection from "../components/ui/title-section.astro";
+import Carousel from "../components/ui/carrousel";
 ---
 
 <section id="promos" class="py-20 bg-moto-dark">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <TitleSection title="Promociones" orientation="center" />
-    {
-      promos.map((section) => (
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <TitleSection title="Promociones" orientation="center" />
         <div class="mb-16">
-          <h3 class="text-2xl font-bold text-moto-white uppercase tracking-tighter italic mb-4">
-            {section.name}
-          </h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {section.promos.map((promo) => (
-              <PromoCard
-                src={promo.src}
-                alt={promo.alt}
-                title={promo.name}
-                subtitle={promo.subtitle}
-                description={promo.description}
-                tags={promo.tags}
-                price={promo.price}
-              />
-            ))}
-          </div>
+            <Carousel client:load cardData={promos} />
         </div>
-      ))
-    }
-  </div>
+    </div>
 </section>

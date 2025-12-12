@@ -13,9 +13,18 @@ export interface MenuSection {
   items: MenuItem[];
 }
 
+export interface PromoItem {
+  title: string;
+  description: string;
+  tag: string;
+  src: any;
+  alt: string;
+  price: string;
+}
+
 export interface PromoSection {
   name: string;
-  promos: MenuItem[];
+  promos: PromoItem[];
 }
 
 export interface OrderSection {

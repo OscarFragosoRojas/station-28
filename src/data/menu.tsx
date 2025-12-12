@@ -12,7 +12,7 @@ export const menuItems: MenuSection[] = [
                 subtitle: "Sencilla",
                 src: burger1,
                 alt: "Honda",
-                tags: ["Honda", "Carne de Res", "Queso Americano", "Papas Fritas"],
+                tags: ["Honda", "Carne de Res", "Queso Americano", "Papas Fritas", "Sencilla"],
                 price: "125",
                 description: "100% carne de res, lechuga, queso americano, quesillo, jitomate, cebolla morada, pepinillos, picante, mayonesa y papas fritas.",
             },
@@ -94,20 +94,20 @@ export const promos: PromoSection[] = [
         name: "Hamburguesas",
         promos: [
             {
-                name: "Honda",
-                subtitle: "Promo Sencilla",
+                title: "Honda",
+                description: "Promo Sencilla",
                 src: burger1,
                 alt: "Hamburguesa Honda",
+                tag: "Promo",
                 price: "120",
-                description: "En la compra de 2 hamburguesas, la tercera va a mitad de precio.",
             },
             {
-                name: "Honda",
-                subtitle: "Promo Pareja",
+                title: "Honda",
+                description: "Promo Pareja",
                 src: burger1,
                 alt: "Hamburguesa Honda",
+                tag: "Promo",
                 price: "120",
-                description: "En la compra de 2 hamburguesas, la tercera va a mitad de precio.",
             },
         ],
     },
@@ -115,20 +115,20 @@ export const promos: PromoSection[] = [
         name: "Wings & Wheels",
         promos: [
             {
-                name: "Honda",
-                subtitle: "Promo Sencilla",
+                title: "Honda",
+                description: "Promo Sencilla",
                 src: burger1,
                 alt: "Hamburguesa Honda",
+                tag: "Promo",
                 price: "120",
-                description: "En la compra de 2 hamburguesas, la tercera va a mitad de precio.",
             },
             {
-                name: "Honda",
-                subtitle: "Promo Doble",
+                title: "Honda",
+                description: "Promo Doble",
                 src: burger1,
                 alt: "Hamburguesa Honda",
+                tag: "Promo",
                 price: "120",
-                description: "En la compra de 2 hamburguesas, la tercera va a mitad de precio.",
             },
         ],
     }
@@ -154,4 +154,3 @@ export const order: OrderSection[] = [
         description: "Doble carne, queso cheddar, tocino crujiente y salsa BBQ casera.",
     },
 ]
-    
