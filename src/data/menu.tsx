@@ -2,6 +2,7 @@ import type { MenuSection } from "../types";
 import type { PromoSection } from "../types";
 import type { OrderSection } from "../types";
 import burger1 from "../assets/images/burger-1.jpeg";
+import didiFood from "../assets/images/pideDidi.png";
 
 export const menuItems: MenuSection[] = [
     {
@@ -136,10 +137,11 @@ export const promos: PromoSection[] = [
 
 export const order: OrderSection[] = [
     {
-        title: "Ordena en línea",
+        title: "Encuéntranos en Didi Food",
         url: "https://www.moto.com.mx/ordenar",
-        icon: "whatsapp",
-        description: "Doble carne, queso cheddar, tocino crujiente y salsa BBQ casera.",
+        src: didiFood,
+        alt: "Didi Food",
+        description: "Pide tus platillos favoritos a través de Didi Food.",
     },
     {
         title: "Visítanos",

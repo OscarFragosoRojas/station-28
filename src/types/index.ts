@@ -33,5 +33,6 @@ export interface OrderSection {
   src?: any;
   alt?: string;
   icon?: string;
+  img?: any;
   description: string;
 }

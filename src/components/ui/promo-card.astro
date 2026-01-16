@@ -1,11 +1,11 @@
 ---
 import { Icon } from "astro-icon/components";
-const { src, alt, name, description, icon } = Astro.props;
+const { src, alt, name, description, icon, url } = Astro.props;
 const iconName = icon ? (icon.includes(":") ? icon : `fa6-brands:${icon}`) : "";
 ---
 
 <a
-  href="#"
+  href={url}
   class="flex flex-col items-center bg-neutral-primary-soft p-6 border border-default rounded-base shadow-xs md:flex-row md:max-w-xl md:flex-row md:max-w-xl"
 >
   {
@@ -14,7 +14,7 @@ const iconName = icon ? (icon.includes(":") ? icon : `fa6-brands:${icon}`) : "";
     ) : (
       <img
         class="object-cover w-full rounded-base h-64 md:h-auto md:w-48 mb-4 md:mb-0"
-        src={src}
+        src={src.src || src}
         alt={alt}
       />
     )
@@ -27,4 +27,4 @@ const iconName = icon ? (icon.includes(":") ? icon : `fa6-brands:${icon}`) : "";
     </h5>
     <p class="mb-6 text-body text-moto-white">{description}</p>
   </div>
-</a>;
+</a>
