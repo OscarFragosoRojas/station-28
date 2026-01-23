@@ -3,6 +3,8 @@ import type { PromoSection } from "../types";
 import type { OrderSection } from "../types";
 import burger1 from "../assets/images/burger-1.jpeg";
 import didiFood from "../assets/images/pideDidi.png";
+import uberEats from "../assets/images/uberEats.png";
+import rappi from "../assets/images/rappi.png";
 
 export const menuItems: MenuSection[] = [
     {
@@ -141,18 +143,20 @@ export const order: OrderSection[] = [
         url: "https://www.moto.com.mx/ordenar",
         src: didiFood,
         alt: "Didi Food",
-        description: "Pide tus platillos favoritos a través de Didi Food.",
+        description: "Encuentranos en Didi Food para pedir lo que mas te guste.",
     },
     {
-        title: "Visítanos",
+        title: "Pide por Rappi",
         url: "https://www.moto.com.mx/visitanos",
-        icon: "whatsapp",
-        description: "Doble carne, queso cheddar, tocino crujiente y salsa BBQ casera.",
+        src: rappi,
+        alt: "Rappi",
+        description: "Buscanos en Rappi para ordenar tu platillo favorito.",
     },
     {
-        title: "Envíanos un mensaje",
-        url: "https://www.moto.com.mx/envianos-un-mensaje",
-        icon: "whatsapp",
-        description: "Doble carne, queso cheddar, tocino crujiente y salsa BBQ casera.",
+        title: "Ordena con Uber Eats",
+        url: "https://www.ubereats.com/mx/store/la-estacion-28/CGvGp1jeQZ6M5dXjUIzLbg?diningMode=DELIVERY&ps=1&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAOgIABleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAadixgYlCd38F_Ddf2DLlJ00JplNdLqtzsfZ1A50bbIU50Uo1ysecjzKzSVMMA_aem_ZmFrZWR1bW15MTZieXRlcw",
+        src: uberEats,
+        alt: "Uber Eats",
+        description: "Pide tus platillos en Uber Eats.",
     },
 ]
