@@ -2,7 +2,7 @@ import type { MenuSection } from "../types";
 import type { PromoSection } from "../types";
 import type { OrderSection } from "../types";
 import burger1 from "../assets/images/burger-1.jpeg";
-import didiFood from "../assets/images/pideDidi.png";
+import whatsapp from "../assets/images/whatsapp.png";
 import uberEats from "../assets/images/uberEats.png";
 import rappi from "../assets/images/rappi.png";
 
@@ -139,15 +139,15 @@ export const promos: PromoSection[] = [
 
 export const order: OrderSection[] = [
     {
-        title: "Encuéntranos en Didi Food",
-        url: "https://www.moto.com.mx/ordenar",
-        src: didiFood,
-        alt: "Didi Food",
-        description: "Encuentranos en Didi Food para pedir lo que mas te guste.",
+        title: "Contacta a la estacion",
+        url: "https://wa.me/5215647979490",
+        src: whatsapp,
+        alt: "Whatsapp",
+        description: "Contactanos a la estacion para pedir lo que mas te guste. (Verifica si cubrimos tu colonia)",
     },
     {
         title: "Pide por Rappi",
-        url: "https://www.moto.com.mx/visitanos",
+        url: "https://www.rappi.com.mx/restaurantes/delivery/602989-la-estacion-28?utm_source=app&utm_medium=deeplink&utm_campaign=share&utm_content=link_in_bio&fbclid=PAZnRzaAOgIClleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAae9IPPOJ5qx3UT22pItGGdQgiOcagnfTf0hWtTh2JnEwyn-Y4_02mz-HGGq7Q_aem_-SudhIDeFrp2A8hKM0WprQ",
         src: rappi,
         alt: "Rappi",
         description: "Buscanos en Rappi para ordenar tu platillo favorito.",
