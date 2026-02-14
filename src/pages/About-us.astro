@@ -1,37 +1,106 @@
 ---
 import TitleSection from "../components/ui/title-section.astro";
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import aboutUsImg from "../assets/images/aboutus.png";
 ---
 
 <section id="about-us" class="py-20 bg-moto-dark">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <TitleSection title="Sobre nosotros" />
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div
-        class="bg-neutral-primary-soft p-6 border border-default rounded-base shadow-xs"
-      >
-        <h2 class="text-2xl font-bold mb-4">Nuestra historia</h2>
-        <p class="text-body">
-          Somos una empresa fundada en 2020 con el objetivo de brindar servicios
-          de calidad a nuestros clientes.
-        </p>
+    <div class="flex flex-col gap-12">
+      <!-- Top Section: Image and History -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div
+          class="w-full h-[400px] md:h-[500px] relative rounded-base overflow-hidden shadow-xs group hover:shadow-xl transition-all duration-500"
+        >
+          <Image
+            src={aboutUsImg}
+            alt="Interior de La Estación 28"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+        </div>
+        <div class="flex flex-col justify-center h-full">
+          <h2
+            class="text-3xl font-bold mb-6 text-moto-red uppercase tracking-wide"
+          >
+            Nuestra Historia
+          </h2>
+          <p class="text-body text-pretty text-lg leading-relaxed">
+            Somos una empresa fundada en 2024 con el objetivo de brindar
+            experiencias auténticas a través de hamburguesas y alitas de alta
+            calidad, combinando sabor intenso, ambiente biker y pasión por el
+            buen servicio. Nos comprometemos a ofrecer productos preparados con
+            ingredientes frescos, recetas originales y una identidad fuerte que
+            conecte con quienes buscan más que comida: buscan actitud, comunidad
+            y carácter.
+          </p>
+        </div>
       </div>
-      <div
-        class="bg-neutral-primary-soft p-6 border border-default rounded-base shadow-xs"
-      >
-        <h2 class="text-2xl font-bold mb-4">Nuestra misión</h2>
-        <p class="text-body">
-          Nuestra misión es brindar servicios de calidad a nuestros clientes y
-          satisfacer sus necesidades.
-        </p>
-      </div>
-      <div
-        class="bg-neutral-primary-soft p-6 border border-default rounded-base shadow-xs"
-      >
-        <h2 class="text-2xl font-bold mb-4">Nuestra visión</h2>
-        <p class="text-body">
-          Nuestra visión es ser la mejor empresa en el mercado y brindar
-          servicios de calidad a nuestros clientes.
-        </p>
+
+      <!-- Bottom Section: Mission and Vision -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Mission Card -->
+        <div
+          class="bg-neutral-primary-soft p-8 rounded-base shadow-md hover:shadow-2xl hover:-translate-y-2 hover:border-moto-red/30 border border-transparent transition-all duration-300 relative overflow-hidden group"
+        >
+          <div
+            class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity duration-500 transform group-hover:scale-110 pointer-events-none"
+          >
+            <Icon name="fa6-solid:bullseye" class="w-24 h-24 text-moto-red" />
+          </div>
+          <div class="relative z-10">
+            <div class="flex items-center gap-4 mb-4">
+              <div
+                class="p-3 bg-moto-red/10 rounded-full text-moto-red group-hover:bg-moto-red group-hover:text-white transition-colors duration-300"
+              >
+                <Icon name="fa6-solid:bullseye" class="w-8 h-8" />
+              </div>
+              <h2
+                class="text-2xl font-bold uppercase tracking-wide group-hover:text-moto-red transition-colors duration-300"
+              >
+                Misión
+              </h2>
+            </div>
+            <p class="text-body text-pretty leading-relaxed">
+              Ser el combustible para tu espíritu libre y tu apetito voraz. En
+              cada hamburguesa y alita que servimos, inyectamos la pasión por la
+              carretera, la calidad artesanal y la camaradería. No solo
+              alimentamos cuerpos, alimentamos historias.
+            </p>
+          </div>
+        </div>
+
+        <!-- Vision Card -->
+        <div
+          class="bg-neutral-primary-soft p-8 rounded-base shadow-md hover:shadow-2xl hover:-translate-y-2 hover:border-moto-red/30 border border-transparent transition-all duration-300 relative overflow-hidden group"
+        >
+          <div
+            class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity duration-500 transform group-hover:scale-110 pointer-events-none"
+          >
+            <Icon name="fa6-solid:eye" class="w-24 h-24 text-moto-red" />
+          </div>
+          <div class="relative z-10">
+            <div class="flex items-center gap-4 mb-4">
+              <div
+                class="p-3 bg-moto-red/10 rounded-full text-moto-red group-hover:bg-moto-red group-hover:text-white transition-colors duration-300"
+              >
+                <Icon name="fa6-solid:eye" class="w-8 h-8" />
+              </div>
+              <h2
+                class="text-2xl font-bold uppercase tracking-wide group-hover:text-moto-red transition-colors duration-300"
+              >
+                Visión
+              </h2>
+            </div>
+            <p class="text-body text-pretty leading-relaxed">
+              Convertirnos en la parada legendaria obligatoria para todo amante
+              del motor y del buen comer en la región. Un destino donde la
+              cultura biker de todas las generaciones se reúne, celebra y crece,
+              kilómetro a kilómetro.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
