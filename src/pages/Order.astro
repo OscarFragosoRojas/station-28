@@ -12,17 +12,145 @@ import { order } from "../data/menu";
         Ordena en línea
       </h2>
       <div class="h-1 w-20 bg-moto-red mx-auto transform -skew-x-12"></div>
+      <p class="mt-4 text-xl text-gray-300">
+        Disfruta de nuestros platillos en la comodidad de tu hogar a través de
+        tu plataforma favorita.
+      </p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
       {
-        order.map((order) => (
-          <PromoCard
-            icon={order.icon}
-            name={order.title}
-            description={order.description}
-          />
+        order.map((item) => (
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group relative overflow-hidden rounded-2xl bg-neutral-900 border border-neutral-800 transition-all duration-300 hover:border-moto-red hover:shadow-[0_0_30px_rgba(220,38,38,0.3)] hover:-translate-y-2 block"
+          >
+            <div class="aspect-video w-full overflow-hidden bg-white/5 relative">
+              <img
+                src={item.src.src || item.src}
+                alt={item.alt}
+                class="h-full w-full object-contain p-8 transition-transform duration-500 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                <span class="text-moto-white font-bold tracking-wider uppercase">
+                  Ordenar ahora
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-moto-white mb-2 italic uppercase">
+                {item.title}
+              </h3>
+              <p class="text-gray-400 text-sm">{item.description}</p>
+            </div>
+          </a>
         ))
       }
+    </div>
+  </div>
+</section>
+
+<section id="visit-us" class="py-20 bg-neutral-900 relative overflow-hidden">
+  <div
+    class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-moto-red to-transparent opacity-50"
+  >
+  </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="space-y-8">
+        <div>
+          <h2
+            class="text-4xl lg:text-5xl font-bold text-moto-white uppercase tracking-tighter italic mb-4"
+          >
+            Visítanos
+          </h2>
+          <div class="h-1 w-20 bg-moto-red transform -skew-x-12"></div>
+        </div>
+        <p class="text-xl text-gray-300 leading-relaxed">
+          Ven y vive la experiencia completa en nuestra sucursal. El mejor
+          ambiente, música y por supuesto, las mejores hamburguesas de la
+          ciudad.
+        </p>
+
+        <div class="space-y-4">
+          <div class="flex items-start space-x-4">
+            <div
+              class="flex-shrink-0 w-12 h-12 rounded-full bg-moto-red/10 flex items-center justify-center text-moto-red border border-moto-red/20"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-moto-white font-bold uppercase mb-1">
+                Ubicación
+              </h3>
+              <p class="text-gray-400">
+                Av. 5 de Mayo 8, Quirino Mendoza, Xochimilco, 16710 Ciudad de
+                México, CDMX.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div
+              class="flex-shrink-0 w-12 h-12 rounded-full bg-moto-red/10 flex items-center justify-center text-moto-red border border-moto-red/20"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-moto-white font-bold uppercase mb-1">Horario</h3>
+              <p class="text-gray-400">Mar - Dom: 4:00 PM - 10:30 PM</p>
+              <p class="text-gray-400">Lun: Cerrado</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl border border-neutral-800 group"
+      >
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.568458534363!2d-99.02529349999999!3d19.2576303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce03001959ea97%3A0x29beca8180f5cb59!2sLa%20Estaci%C3%B3n%2028!5e0!3m2!1ses!2smx!4v1771008605002!5m2!1ses!2smx"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="grayscale group-hover:grayscale-0 transition-all duration-500"
+        ></iframe>
+      </div>
     </div>
   </div>
 </section>

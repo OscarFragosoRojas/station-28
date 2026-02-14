@@ -2,6 +2,9 @@ import type { MenuSection } from "../types";
 import type { PromoSection } from "../types";
 import type { OrderSection } from "../types";
 import burger1 from "../assets/images/burger-1.jpeg";
+import whatsapp from "../assets/images/whatsapp.png";
+import uberEats from "../assets/images/uberEats.png";
+import rappi from "../assets/images/rappi.png";
 
 export const menuItems: MenuSection[] = [
     {
@@ -12,7 +15,7 @@ export const menuItems: MenuSection[] = [
                 subtitle: "Sencilla",
                 src: burger1,
                 alt: "Honda",
-                tags: ["Honda", "Carne de Res", "Queso Americano", "Papas Fritas"],
+                tags: ["Honda", "Carne de Res", "Queso Americano", "Papas Fritas", "Sencilla"],
                 price: "125",
                 description: "100% carne de res, lechuga, queso americano, quesillo, jitomate, cebolla morada, pepinillos, picante, mayonesa y papas fritas.",
             },
@@ -94,20 +97,20 @@ export const promos: PromoSection[] = [
         name: "Hamburguesas",
         promos: [
             {
-                name: "Honda",
-                subtitle: "Promo Sencilla",
+                title: "Honda",
+                description: "Promo Sencilla",
                 src: burger1,
                 alt: "Hamburguesa Honda",
+                tag: "Promo",
                 price: "120",
-                description: "En la compra de 2 hamburguesas, la tercera va a mitad de precio.",
             },
             {
-                name: "Honda",
-                subtitle: "Promo Pareja",
+                title: "Honda",
+                description: "Promo Pareja",
                 src: burger1,
                 alt: "Hamburguesa Honda",
+                tag: "Promo",
                 price: "120",
-                description: "En la compra de 2 hamburguesas, la tercera va a mitad de precio.",
             },
         ],
     },
@@ -115,20 +118,20 @@ export const promos: PromoSection[] = [
         name: "Wings & Wheels",
         promos: [
             {
-                name: "Honda",
-                subtitle: "Promo Sencilla",
+                title: "Honda",
+                description: "Promo Sencilla",
                 src: burger1,
                 alt: "Hamburguesa Honda",
+                tag: "Promo",
                 price: "120",
-                description: "En la compra de 2 hamburguesas, la tercera va a mitad de precio.",
             },
             {
-                name: "Honda",
-                subtitle: "Promo Doble",
+                title: "Honda",
+                description: "Promo Doble",
                 src: burger1,
                 alt: "Hamburguesa Honda",
+                tag: "Promo",
                 price: "120",
-                description: "En la compra de 2 hamburguesas, la tercera va a mitad de precio.",
             },
         ],
     }
@@ -136,22 +139,24 @@ export const promos: PromoSection[] = [
 
 export const order: OrderSection[] = [
     {
-        title: "Ordena en línea",
-        url: "https://www.moto.com.mx/ordenar",
-        icon: "whatsapp",
-        description: "Doble carne, queso cheddar, tocino crujiente y salsa BBQ casera.",
+        title: "Contacta a la estacion",
+        url: "https://wa.me/5215647979490",
+        src: whatsapp,
+        alt: "Whatsapp",
+        description: "Contactanos a la estacion para pedir lo que mas te guste. (Verifica si cubrimos tu colonia)",
     },
     {
-        title: "Visítanos",
-        url: "https://www.moto.com.mx/visitanos",
-        icon: "whatsapp",
-        description: "Doble carne, queso cheddar, tocino crujiente y salsa BBQ casera.",
+        title: "Pide por Rappi",
+        url: "https://www.rappi.com.mx/restaurantes/delivery/602989-la-estacion-28?utm_source=app&utm_medium=deeplink&utm_campaign=share&utm_content=link_in_bio&fbclid=PAZnRzaAOgIClleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAae9IPPOJ5qx3UT22pItGGdQgiOcagnfTf0hWtTh2JnEwyn-Y4_02mz-HGGq7Q_aem_-SudhIDeFrp2A8hKM0WprQ",
+        src: rappi,
+        alt: "Rappi",
+        description: "Buscanos en Rappi para ordenar tu platillo favorito.",
     },
     {
-        title: "Envíanos un mensaje",
-        url: "https://www.moto.com.mx/envianos-un-mensaje",
-        icon: "whatsapp",
-        description: "Doble carne, queso cheddar, tocino crujiente y salsa BBQ casera.",
+        title: "Ordena con Uber Eats",
+        url: "https://www.ubereats.com/mx/store/la-estacion-28/CGvGp1jeQZ6M5dXjUIzLbg?diningMode=DELIVERY&ps=1&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAOgIABleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAadixgYlCd38F_Ddf2DLlJ00JplNdLqtzsfZ1A50bbIU50Uo1ysecjzKzSVMMA_aem_ZmFrZWR1bW15MTZieXRlcw",
+        src: uberEats,
+        alt: "Uber Eats",
+        description: "Pide tus platillos en Uber Eats.",
     },
 ]
-    
