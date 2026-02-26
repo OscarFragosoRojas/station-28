@@ -16,9 +16,13 @@ import TitleHero from "../components/ui/title-hero.astro";
 
   <!-- Watermark Image -->
   <div
-    class="absolute inset-0 flex items-center justify-center z-0 pointer-events-none opacity-10"
+    class="absolute inset-0 flex items-center justify-center z-0 pointer-events-none opacity-40"
   >
-    <img src="/hero-bg.jpeg" alt="Watermark" class="w-full object-contain" />
+    <img
+      src="/hero-bg.jpeg"
+      alt="Watermark"
+      class="w-full h-full object-cover object-[70%_center] opacity-50"
+    />
   </div>
 
   <div class="relative z-10 text-center px-4">

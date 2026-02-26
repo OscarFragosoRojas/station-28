@@ -3,8 +3,16 @@ import MenuCard from "../components/ui/menu-card.astro";
 import { menuItems } from "../data/menu";
 ---
 
-<section id="menu" class="py-20 bg-moto-dark-gray">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="menu" class="py-20 bg-neutral-950 relative overflow-hidden">
+  <div
+    class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"
+  >
+  </div>
+  <div
+    class="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-moto-red/20 to-transparent"
+  >
+  </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="text-center mb-4 mt-8">
       <h2
         class="text-4xl font-bold text-moto-white uppercase tracking-tighter italic"
@@ -15,22 +23,38 @@ import { menuItems } from "../data/menu";
     </div>
     {
       menuItems.map((section) => (
-        <div class="py-4">
-          <span class="text-4xl font-bold text-moto-white hover-anim hover:text-moto-red">
-            {section.name}
-          </span>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-4">
-            {section.items.map((item) => (
-              <MenuCard
-                src={item.src}
-                alt={item.alt}
-                title={item.name}
-                subtitle={item.subtitle}
-                tags={item.tags}
-                price={item.price}
-                description={item.description}
-              />
-            ))}
+        <div class="py-8">
+          <div class="flex items-center gap-4 mb-8">
+            <h3 class="text-3xl md:text-4xl font-black text-moto-white uppercase tracking-tighter italic whitespace-nowrap drop-shadow-md">
+              {section.name}
+            </h3>
+            <div class="h-[3px] w-full bg-gradient-to-r from-moto-red via-moto-red/40 to-transparent transform -skew-x-12" />
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {section.name === "Hamburguesas" ||
+            section.name === "Para compartir"
+              ? section.items.map((item) => (
+                  <MenuCard
+                    src={item.src}
+                    alt={item.alt}
+                    title={item.name}
+                    subtitle={item.subtitle}
+                    tags={item.tags}
+                    price={item.price}
+                    description={item.description}
+                  />
+                ))
+              : section.items.map((item) => (
+                  <MenuCard
+                    src={item.src}
+                    alt={item.alt}
+                    title={item.name}
+                    subtitle={item.subtitle}
+                    tags={item.tags}
+                    price={item.price}
+                    description={item.description}
+                  />
+                ))}
           </div>
         </div>
       ))

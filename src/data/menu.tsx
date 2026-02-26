@@ -2,18 +2,21 @@ import type { MenuSection } from "../types";
 import type { PromoSection } from "../types";
 import type { OrderSection } from "../types";
 import burger1 from "../assets/images/burger-1.jpeg";
+import burger_bacon from "../assets/images/burger_bacon.jpeg";
+import burger_double from "../assets/images/burger_double.jpeg";
+import burger_single from "../assets/images/burger_single.jpeg";
 import whatsapp from "../assets/images/whatsapp.png";
 import uberEats from "../assets/images/uberEats.png";
 import rappi from "../assets/images/rappi.png";
 
 export const menuItems: MenuSection[] = [
     {
-        name: "Hambuguesas",
+        name: "Hamburguesas",
         items: [
             {
                 name: "Honda",
                 subtitle: "Sencilla",
-                src: burger1,
+                src: burger_single,
                 alt: "Honda",
                 tags: ["Honda", "Carne de Res", "Queso Americano", "Papas Fritas", "Sencilla"],
                 price: "125",
@@ -31,7 +34,7 @@ export const menuItems: MenuSection[] = [
             {
                 name: "Indian",
                 subtitle: "Tocino",
-                src: burger1,
+                src: burger_bacon,
                 alt: "Hamburguesa Indian",
                 tags: ["Indian", "Carne de Res", "Queso Americano", "Tocino", "Papas Fritas"],
                 price: "145",
@@ -40,7 +43,7 @@ export const menuItems: MenuSection[] = [
             {
                 name: "Harley Davidson",
                 subtitle: "Doble Carne",
-                src: burger1,
+                src: burger_double,
                 alt: "Hamburguesa Harley Davidson",
                 tags: ["Harley Davidson", "Doble Carne", "Queso Americano", "Papas Fritas"],
                 price: "165",

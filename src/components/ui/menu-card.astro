@@ -4,24 +4,39 @@ import { tagIcons, defaultIcon } from "../../data/tag-icons";
 ---
 
 <div
-  class="bg-moto-black/30 backdrop-blur-sm block max-w-sm border border-moto-black shadow-md rounded-xl"
+  class="group relative flex flex-col bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden transition-all duration-300 hover:border-moto-red hover:-translate-y-1 hover:shadow-[0_10px_30px_-10px_rgba(220,38,38,0.3)] h-full"
 >
-  <img class="rounded-t-xl" src={src.src || src} alt={alt} />
-  <div class="p-6 text-center">
-    <div class="flex flex-wrap gap-2 justify-center mb-4">
+  <div
+    class="relative w-full aspect-[4/3] overflow-hidden bg-black flex-shrink-0"
+  >
+    <img
+      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
+      src={src.src || src}
+      alt={alt}
+    />
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-neutral-900 to-transparent opacity-80"
+    >
+    </div>
+  </div>
+
+  <div
+    class="p-6 flex flex-col flex-grow relative z-10 bg-gradient-to-b from-neutral-900 to-neutral-950"
+  >
+    <div class="flex flex-wrap gap-2 mb-4">
       {
         tags &&
           tags.map((tag: string) => (
-            <span class="inline-flex items-center bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded-sm">
+            <span class="inline-flex items-center bg-neutral-800 border-l-2 border-moto-red text-gray-300 text-[10px] font-bold uppercase tracking-wider px-2 py-1 shadow-sm">
               <svg
-                class="w-3 h-3 me-1"
+                class="w-3 h-3 me-1.5 opacity-70"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                stroke-width="2"
                 stroke="currentColor"
               >
                 <path
@@ -35,19 +50,32 @@ import { tagIcons, defaultIcon } from "../../data/tag-icons";
           ))
       }
     </div>
-    <div class="flex flex-col mb-6">
-      <h5 class="text-2xl font-semibold tracking-tight text-heading">
-        {title}
-      </h5>
-      <span class="text-moto-red text-xl">{subtitle}</span>
+
+    <div class="mb-4 flex justify-between items-start gap-2">
+      <div class="flex-grow">
+        <h4
+          class="text-2xl font-black uppercase italic tracking-tight text-moto-white group-hover:text-moto-red transition-colors duration-300 pr-2"
+        >
+          {title}
+        </h4>
+        <span class="text-moto-red font-bold text-xs uppercase tracking-[0.2em]"
+          >{subtitle}</span
+        >
+      </div>
+      <div
+        class="bg-moto-red text-moto-white font-black italic px-3 py-1 rounded shadow-lg transform rotate-2 border border-red-500/50 group-hover:scale-105 transition-transform flex-shrink-0 text-xl"
+      >
+        ${price}
+      </div>
     </div>
-    <p class="mb-6 text-base text-center text-fg-neutral-strong">
+
+    <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
       {description}
     </p>
-    <span
-      class="inline-flex font-bold items-center justify-center text-white bg-brand box-border border shadow-xs rounded-lg text-xl px-4 py-2.5"
+
+    <div
+      class="w-full h-px bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-auto"
     >
-      ${price}
-    </span>
+    </div>
   </div>
 </div>
