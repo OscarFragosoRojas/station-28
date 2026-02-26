@@ -2,18 +2,21 @@ import type { MenuSection } from "../types";
 import type { PromoSection } from "../types";
 import type { OrderSection } from "../types";
 import burger1 from "../assets/images/burger-1.jpeg";
+import burger_bacon from "../assets/images/burger_bacon.jpeg";
+import burger_double from "../assets/images/burger_double.jpeg";
+import burger_single from "../assets/images/burger_single.jpeg";
 import whatsapp from "../assets/images/whatsapp.png";
 import uberEats from "../assets/images/uberEats.png";
 import rappi from "../assets/images/rappi.png";
 
 export const menuItems: MenuSection[] = [
     {
-        name: "Hambuguesas",
+        name: "Hamburguesas",
         items: [
             {
                 name: "Honda",
                 subtitle: "Sencilla",
-                src: burger1,
+                src: burger_single,
                 alt: "Honda",
                 tags: ["Honda", "Carne de Res", "Queso Americano", "Papas Fritas", "Sencilla"],
                 price: "125",
@@ -31,7 +34,7 @@ export const menuItems: MenuSection[] = [
             {
                 name: "Indian",
                 subtitle: "Tocino",
-                src: burger1,
+                src: burger_bacon,
                 alt: "Hamburguesa Indian",
                 tags: ["Indian", "Carne de Res", "Queso Americano", "Tocino", "Papas Fritas"],
                 price: "145",
@@ -40,7 +43,7 @@ export const menuItems: MenuSection[] = [
             {
                 name: "Harley Davidson",
                 subtitle: "Doble Carne",
-                src: burger1,
+                src: burger_double,
                 alt: "Hamburguesa Harley Davidson",
                 tags: ["Harley Davidson", "Doble Carne", "Queso Americano", "Papas Fritas"],
                 price: "165",
@@ -52,13 +55,31 @@ export const menuItems: MenuSection[] = [
         name: "Wings & Wheels",
         items: [
             {
-                name: "La Chopper",
-                subtitle: "Doble Carne",
+                name: "YamaWings",
+                subtitle: "7 piezas de alitas",
                 src: burger1,
-                alt: "Hamburguesa Chopper",
-                tags: ["Chopper", "Doble Carne", "Queso Cheddar", "Tocino", "Salsa BBQ"],
-                price: "120",
-                description: "Doble carne, queso cheddar, tocino crujiente y salsa BBQ casera.",
+                alt: "YamaWings",
+                tags: ["YamaWings", "Varios Sabores", "Papas Fritas"],
+                price: "149",
+                description: "7 piezas de alitas con lechuga, guarnición y aderezo. Además de papas fritas y eleccion de 2 salsas.",
+            },
+            {
+                name: "KawaWings",
+                subtitle: "10 piezas de alitas",
+                src: burger1,
+                alt: "KawaWings",
+                tags: ["KawaWings", "Varios Sabores", "Papas Fritas"],
+                price: "199",
+                description: "10 piezas de alitas con lechuga, guarnición y aderezo. Además de papas fritas y eleccion de 2 salsas.",
+            },
+            {
+                name: "DucatiWings",
+                subtitle: "1 kg de alitas",
+                src: burger1,
+                alt: "DucatiWings",
+                tags: ["DucatiWings", "Varios Sabores", "Papas Fritas"],
+                price: "309",
+                description: "1 kg de alitas con lechuga, guarnición y aderezo. Eleccion de 2 salsas.",
             },
         ],
     },
@@ -66,14 +87,50 @@ export const menuItems: MenuSection[] = [
         name: "Para compartir",
         items: [
             {
-                name: "La Chopper",
-                subtitle: "Doble Carne",
+                name: "Suspensiones",
+                subtitle: "8 piezas de dedos de queso",
                 src: burger1,
-                alt: "Hamburguesa Chopper",
-                tags: ["Chopper", "Doble Carne", "Queso Cheddar", "Tocino", "Salsa BBQ"],
+                alt: "Suspensiones",
+                tags: ["Dedos de queso", "Ranch"],
                 price: "120",
-                description: "Doble carne, queso cheddar, tocino crujiente y salsa BBQ casera.",
+                description: "8 piezas de dedos de queso con lechuga y aderezo ranch.",
             },
+            {
+                name: "Discos",
+                subtitle: "8 piezas de aros de cebolla",
+                src: burger1,
+                alt: "Discos",
+                tags: ["Aros de cebolla", "Ranch"],
+                price: "120",
+                description: "8 piezas de aros de cebolla con lechuga y aderezo ranch.",
+            },
+            {
+                name: "Discos",
+                subtitle: "Papas fritas con queso",
+                src: burger1,
+                alt: "Discos",
+                tags: ["Aros de cebolla", "Ranch"],
+                price: "120",
+                description: "8 piezas de aros de cebolla con lechuga y aderezo ranch.",
+            },
+            {
+                name: "Calipers",
+                subtitle: "Papas gajo ",
+                src: burger1,
+                alt: "Calipers",
+                tags: ["Papas fritas", "Carne"],
+                price: "79",
+                description: "250gr de papas gajo fritas acompañadas con catsup.",
+            },
+            {
+                name: "Costillas de elote",
+                subtitle: "Elote en trozos",
+                src: burger1,
+                alt: "Costillas de elote",
+                tags: ["Elote", "Queso", "Crema"],
+                price: "120",
+                description: "Elote en trozos con queso, crema y aderezo.",
+            }
         ],
     },
     {
