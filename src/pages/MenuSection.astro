@@ -1,5 +1,6 @@
 ---
 import MenuCard from "../components/ui/menu-card.astro";
+import Thermometer from "../components/ui/thermometer.astro";
 import { menuItems } from "../data/menu";
 ---
 
@@ -30,6 +31,7 @@ import { menuItems } from "../data/menu";
             </h3>
             <div class="h-[3px] w-full bg-gradient-to-r from-moto-red via-moto-red/40 to-transparent transform -skew-x-12" />
           </div>
+          {section.name === "Wings & Wheels" && <Thermometer />}
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {section.name === "Hamburguesas" ||
             section.name === "Para compartir"
