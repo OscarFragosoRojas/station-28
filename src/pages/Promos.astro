@@ -1,7 +1,7 @@
 ---
 import { promos } from "../data/menu";
 import TitleSection from "../components/ui/title-section.astro";
-import Carousel from "../components/ui/carrousel";
+import PromoSlider from "../components/ui/promo-slider";
 import NotPromotionComponent from "../components/ui/not-promotion-component.astro";
 ---
 
@@ -17,7 +17,7 @@ import NotPromotionComponent from "../components/ui/not-promotion-component.astr
         <>
           <TitleSection title="Promociones" orientation="center" />
           <div class="mb-16">
-            <Carousel client:load cardData={promos} />
+            <PromoSlider client:load promos={promos} />
           </div>
         </>
       )
