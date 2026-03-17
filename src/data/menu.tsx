@@ -9,7 +9,9 @@ import onion_rings from "../assets/images/onion_rings.png";
 import corn_ribs from "../assets/images/corn_ribs.png";
 import cheese_sticks from "../assets/images/cheese_sticks.png";
 import french_fries from "../assets/images/french_fries.png";
+import potato_wedges from "../assets/images/potato_wedges.png";
 import wings_7 from "../assets/images/wings_seven.png";
+import wings_10 from "../assets/images/wings_ten.png"; 
 import wings_kg from "../assets/images/wings_kg.png";
 import whatsapp from "../assets/images/whatsapp.png";
 import uberEats from "../assets/images/uberEats.png";
@@ -73,7 +75,7 @@ export const menuItems: MenuSection[] = [
             {
                 name: "KawaWings",
                 subtitle: "10 piezas de alitas",
-                src: burger1,
+                src: wings_10,
                 alt: "KawaWings",
                 tags: ["KawaWings", "Varios Sabores", "Papas Fritas"],
                 price: "199",
@@ -112,18 +114,18 @@ export const menuItems: MenuSection[] = [
                 description: "8 piezas de aros de cebolla con lechuga y aderezo ranch.",
             },
             {
-                name: "Discos",
-                subtitle: "Papas fritas con queso",
+                name: "Barras invertidas",
+                subtitle: "Papas fritas",
                 src: french_fries,
-                alt: "Discos",
-                tags: ["Aros de cebolla", "Ranch"],
-                price: "120",
-                description: "8 piezas de aros de cebolla con lechuga y aderezo ranch.",
+                alt: "Barras invertidas",
+                tags: ["Papas fritas", "Diferentes tamaños" ],
+                price: "70 - 95",
+                description: "Papas fritas con especias, elige entre chicas y grandes",
             },
             {
                 name: "Calipers",
                 subtitle: "Papas gajo ",
-                src: burger1,
+                src: potato_wedges,
                 alt: "Calipers",
                 tags: ["Papas fritas", "Carne"],
                 price: "79",
