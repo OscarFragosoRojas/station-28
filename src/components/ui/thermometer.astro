@@ -24,28 +24,75 @@ const levelNames = ["Cero", "Poco", "Medio", "Alto", "Bravo", "Infierno"];
   </div>
 
   <div class="flex flex-col md:flex-row gap-8 items-center md:items-stretch">
-    <!-- Thermometer Visualization -->
-    <div
-      class="relative flex flex-col items-center justify-between h-64 w-12 bg-neutral-800 rounded-full border-4 border-neutral-700 shadow-inner p-1"
-    >
-      {
-        levels
-          .slice()
-          .reverse()
-          .map((level) => (
-            <div
-              class={`w-full h-[15%] rounded-full mb-0.5 last:mb-0 transition-all duration-500 shadow-lg ${levelColors[level]} ${level === 5 ? "animate-pulse border border-red-500/50" : ""}`}
-              title={levelNames[level]}
-            />
-          ))
-      }
-      <!-- Bulb at the bottom -->
+    <!-- Thermometer Visualization Container -->
+    <div class="flex items-center gap-1 sm:gap-3 relative pb-6 md:pb-0">
+      <!-- Text Labels -->
+      <div class="flex flex-col h-64 py-1 z-10 w-20 sm:w-24">
+        {
+          levels
+            .slice()
+            .reverse()
+            .map((level) => {
+              const textColors = [
+                "text-emerald-500",
+                "text-yellow-400",
+                "text-orange-400",
+                "text-orange-600",
+                "text-red-600",
+                "text-red-500",
+              ];
+              const bgColors = [
+                "bg-emerald-500",
+                "bg-yellow-400",
+                "bg-orange-400",
+                "bg-orange-600",
+                "bg-red-600",
+                "bg-red-500",
+              ];
+              return (
+                <div class="flex-1 flex items-center justify-end">
+                  <span
+                    class={`text-[10px] sm:text-xs font-black uppercase tracking-wider text-right leading-none ${textColors[level]} ${level === 5 ? "animate-pulse drop-shadow-[0_0_5px_rgba(239,68,68,0.5)]" : ""}`}
+                  >
+                    {levelNames[level]}
+                  </span>
+                  <div
+                    class={`w-2 sm:w-3 h-0.5 rounded-full ml-1.5 sm:ml-2 ${bgColors[level]}`}
+                  />
+                </div>
+              );
+            })
+        }
+      </div>
+
+      <!-- Thermometer Tube -->
       <div
-        class="absolute -bottom-4 w-16 h-16 bg-neutral-800 rounded-full border-4 border-neutral-700 flex items-center justify-center overflow-hidden"
+        class="relative flex flex-col items-center justify-between h-64 w-12 bg-neutral-800 rounded-full border-4 border-neutral-700 shadow-inner p-1"
       >
         <div
-          class="w-10 h-10 bg-moto-red rounded-full animate-pulse shadow-[0_0_20px_rgba(220,38,38,0.6)]"
+          class="w-full h-full rounded-full shadow-lg relative flex flex-col overflow-hidden"
+          style="background: linear-gradient(to top, #10b981 0%, #facc15 20%, #fb923c 40%, #ea580c 60%, #dc2626 80%);"
         >
+          {
+            levels
+              .slice()
+              .reverse()
+              .map((level) => (
+                <div
+                  class="w-full flex-1 cursor-help"
+                  title={levelNames[level]}
+                />
+              ))
+          }
+        </div>
+        <!-- Bulb at the bottom -->
+        <div
+          class="absolute -bottom-4 w-16 h-16 bg-neutral-800 rounded-full border-4 border-neutral-700 flex items-center justify-center overflow-hidden z-10"
+        >
+          <div
+            class="w-10 h-10 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_20px_rgba(16,185,129,0.6)]"
+          >
+          </div>
         </div>
       </div>
     </div>
@@ -106,7 +153,3 @@ const levelNames = ["Cero", "Poco", "Medio", "Alto", "Bravo", "Infierno"];
     </div>
   </div>
 </div>
-
-<style>
-  /* Custom scrollbar or industrial effects if needed */
-</style>

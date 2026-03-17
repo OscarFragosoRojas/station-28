@@ -1,11 +1,11 @@
 ---
 import { promos } from "../data/menu";
 import TitleSection from "../components/ui/title-section.astro";
-import Carousel from "../components/ui/carrousel";
+import PromoSlider from "../components/ui/promo-slider";
 import NotPromotionComponent from "../components/ui/not-promotion-component.astro";
 ---
 
-<section id="promos" class="py-20 bg-moto-dark">
+<section id="promos" class="pt-20 bg-moto-dark">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     {
       promos.length === 0 ? (
@@ -17,7 +17,7 @@ import NotPromotionComponent from "../components/ui/not-promotion-component.astr
         <>
           <TitleSection title="Promociones" orientation="center" />
           <div class="mb-16">
-            <Carousel client:load cardData={promos} />
+            <PromoSlider client:load promos={promos} />
           </div>
         </>
       )

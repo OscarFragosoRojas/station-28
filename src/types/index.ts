@@ -36,3 +36,9 @@ export interface OrderSection {
   img?: any;
   description: string;
 }
+
+export interface Sauce {
+  name: string;
+  level: number;
+  description?: string;
+}

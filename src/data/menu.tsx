@@ -5,9 +5,18 @@ import burger1 from "../assets/images/burger-1.jpeg";
 import burger_bacon from "../assets/images/burger_bacon.jpeg";
 import burger_double from "../assets/images/burger_double.jpeg";
 import burger_single from "../assets/images/burger_single.jpeg";
+import onion_rings from "../assets/images/onion_rings.png";
+import corn_ribs from "../assets/images/corn_ribs.png";
+import cheese_sticks from "../assets/images/cheese_sticks.png";
+import french_fries from "../assets/images/french_fries.png";
+import potato_wedges from "../assets/images/potato_wedges.png";
+import wings_7 from "../assets/images/wings_seven.png";
+import wings_10 from "../assets/images/wings_ten.png"; 
+import wings_kg from "../assets/images/wings_kg.png";
 import whatsapp from "../assets/images/whatsapp.png";
 import uberEats from "../assets/images/uberEats.png";
 import rappi from "../assets/images/rappi.png";
+import promo1 from "../assets/images/promo1.png";
 
 export const menuItems: MenuSection[] = [
     {
@@ -57,7 +66,7 @@ export const menuItems: MenuSection[] = [
             {
                 name: "YamaWings",
                 subtitle: "7 piezas de alitas",
-                src: burger1,
+                src: wings_7,
                 alt: "YamaWings",
                 tags: ["YamaWings", "Varios Sabores", "Papas Fritas"],
                 price: "149",
@@ -66,7 +75,7 @@ export const menuItems: MenuSection[] = [
             {
                 name: "KawaWings",
                 subtitle: "10 piezas de alitas",
-                src: burger1,
+                src: wings_10,
                 alt: "KawaWings",
                 tags: ["KawaWings", "Varios Sabores", "Papas Fritas"],
                 price: "199",
@@ -75,7 +84,7 @@ export const menuItems: MenuSection[] = [
             {
                 name: "DucatiWings",
                 subtitle: "1 kg de alitas",
-                src: burger1,
+                src: wings_kg,
                 alt: "DucatiWings",
                 tags: ["DucatiWings", "Varios Sabores", "Papas Fritas"],
                 price: "309",
@@ -89,7 +98,7 @@ export const menuItems: MenuSection[] = [
             {
                 name: "Suspensiones",
                 subtitle: "8 piezas de dedos de queso",
-                src: burger1,
+                src: cheese_sticks,
                 alt: "Suspensiones",
                 tags: ["Dedos de queso", "Ranch"],
                 price: "120",
@@ -98,25 +107,25 @@ export const menuItems: MenuSection[] = [
             {
                 name: "Discos",
                 subtitle: "8 piezas de aros de cebolla",
-                src: burger1,
+                src: onion_rings,
                 alt: "Discos",
                 tags: ["Aros de cebolla", "Ranch"],
                 price: "120",
                 description: "8 piezas de aros de cebolla con lechuga y aderezo ranch.",
             },
             {
-                name: "Discos",
-                subtitle: "Papas fritas con queso",
-                src: burger1,
-                alt: "Discos",
-                tags: ["Aros de cebolla", "Ranch"],
-                price: "120",
-                description: "8 piezas de aros de cebolla con lechuga y aderezo ranch.",
+                name: "Barras invertidas",
+                subtitle: "Papas fritas",
+                src: french_fries,
+                alt: "Barras invertidas",
+                tags: ["Papas fritas", "Diferentes tamaños" ],
+                price: "70 - 95",
+                description: "Papas fritas con especias, elige entre chicas y grandes",
             },
             {
                 name: "Calipers",
                 subtitle: "Papas gajo ",
-                src: burger1,
+                src: potato_wedges,
                 alt: "Calipers",
                 tags: ["Papas fritas", "Carne"],
                 price: "79",
@@ -125,7 +134,7 @@ export const menuItems: MenuSection[] = [
             {
                 name: "Costillas de elote",
                 subtitle: "Elote en trozos",
-                src: burger1,
+                src: corn_ribs,
                 alt: "Costillas de elote",
                 tags: ["Elote", "Queso", "Crema"],
                 price: "120",
@@ -155,43 +164,14 @@ export const promos: PromoSection[] = [
         promos: [
             {
                 title: "Honda",
-                description: "Promo Sencilla",
-                src: burger1,
+                description: "2 x precio especial",
+                src: promo1,
                 alt: "Hamburguesa Honda",
                 tag: "Promo",
                 price: "120",
-            },
-            {
-                title: "Honda",
-                description: "Promo Pareja",
-                src: burger1,
-                alt: "Hamburguesa Honda",
-                tag: "Promo",
-                price: "120",
-            },
+            }
         ],
     },
-    {
-        name: "Wings & Wheels",
-        promos: [
-            {
-                title: "Honda",
-                description: "Promo Sencilla",
-                src: burger1,
-                alt: "Hamburguesa Honda",
-                tag: "Promo",
-                price: "120",
-            },
-            {
-                title: "Honda",
-                description: "Promo Doble",
-                src: burger1,
-                alt: "Hamburguesa Honda",
-                tag: "Promo",
-                price: "120",
-            },
-        ],
-    }
 ]
 
 export const order: OrderSection[] = [
