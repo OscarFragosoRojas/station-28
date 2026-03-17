@@ -177,7 +177,7 @@ export const promos: PromoSection[] = [
 export const order: OrderSection[] = [
     {
         title: "Contacta a la estacion",
-        url: "https://wa.me/5215647979490",
+        url: "https://wa.me/5215647979490?text=¡Hola!%20Quiero%20hacer%20un%20pedido%20en%20La%20Estación%2028.%20¿Qué%20tienen%20disponible?",
         src: whatsapp,
         alt: "Whatsapp",
         description: "Contactanos a la estacion para pedir lo que mas te guste. (Verifica si cubrimos tu colonia)",

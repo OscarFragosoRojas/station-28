@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ButtonComponent from "../components/ui/button-component.astro";
+---
+
+<Layout>
+  <section class="min-h-screen bg-moto-black flex items-center justify-center px-4">
+    <div class="text-center">
+      <h1 class="text-[150px] font-black text-moto-red italic tracking-tighter leading-none">404</h1>
+      <h2 class="text-3xl font-bold text-moto-white uppercase tracking-wider mb-4">Página no encontrada</h2>
+      <p class="text-gray-400 text-lg mb-8 max-w-md mx-auto">
+        Lo sentimos, la página que buscas no existe. Puede que haya sido movida o eliminada.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <ButtonComponent href="/" name="Volver al inicio" size="large" />
+      </div>
+    </div>
+  </section>
+</Layout>

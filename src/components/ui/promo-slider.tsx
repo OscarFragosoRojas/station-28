@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import type { PromoSection, PromoItem } from '../../types';
 
 interface PromoSliderProps {
@@ -71,7 +71,7 @@ const PromoSlider = ({ promos }: PromoSliderProps) => {
                 {items.map((promo, index) => (
                     <div
                         key={index}
-                        className="snap-center shrink-0 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[800px] aspect-square sm:aspect-[4/3] md:aspect-[21/9] relative group/card rounded-3xl overflow-hidden shadow-2xl border border-moto-white/10 transition-transform duration-300 hover:scale-[1.02]"
+                        className="snap-center shrink-0 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[800px] aspect-square sm:aspect-[4/3] md:aspect-[21/9] relative group/card rounded-3xl overflow-hidden shadow-2xl transition-transform duration-300 hover:scale-[1.02]"
                     >
                         {promo.tag && (
                             <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-20 py-1.5 px-4 bg-yellow-500 text-black font-black text-xs sm:text-sm uppercase tracking-widest transform -skew-x-12 drop-shadow-lg">

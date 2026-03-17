@@ -1,11 +1,10 @@
 ---
 import MenuCard from "../components/ui/menu-card.astro";
 import Thermometer from "../components/ui/thermometer.astro";
-import Carousel from "../components/ui/carrousel";
 import { menuItems } from "../data/menu";
 ---
 
-<section id="menu" class="py-20 bg-neutral-950 relative overflow-hidden">
+<section id="menu" class="py-20 bg-neutral-950 relative overflow-hidden scroll-mt-20">
   <div
     class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"
   >
@@ -34,8 +33,18 @@ import { menuItems } from "../data/menu";
           </div>
           {section.name === "Wings & Wheels" && <Thermometer />}
           {section.name === "Llena el tanque" ? (
-            <div class="mb-4">
-              <Carousel client:load cardData={section.items} />
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {section.items.map((item) => (
+                <MenuCard
+                  src={item.src}
+                  alt={item.alt}
+                  title={item.name}
+                  subtitle={item.subtitle}
+                  tags={item.tags}
+                  price={item.price}
+                  description={item.description}
+                />
+              ))}
             </div>
           ) : (
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
