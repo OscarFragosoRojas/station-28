@@ -16,7 +16,7 @@ import wings_kg from "../assets/images/wings_kg.png";
 import whatsapp from "../assets/images/whatsapp.png";
 import uberEats from "../assets/images/uberEats.png";
 import rappi from "../assets/images/rappi.png";
-import promo1 from "../assets/images/promo1.png";
+import promo2 from "../assets/images/promo_station.png";
 
 export const menuItems: MenuSection[] = [
     {
@@ -163,13 +163,21 @@ export const promos: PromoSection[] = [
         name: "Hamburguesas",
         promos: [
             {
-                title: "Honda",
-                description: "2 x precio especial",
-                src: promo1,
+                title: "",
+                description: "Precio especial",
+                src: promo2,
                 alt: "Hamburguesa Honda",
-                tag: "Promo",
-                price: "120",
-            }
+                tag: "Promo Martes",
+                price: "289",
+            },
+            {
+                title: "Kilo de Alitas",
+                description: "Precio especial",
+                src: promo2,
+                alt: "Kilo de Alitas",
+                tag: "Promo Miercoles",
+                price: "299",
+            },
         ],
     },
 ]
