@@ -18,6 +18,7 @@ export interface PromoItem {
   description: string;
   tag: string;
   src: any;
+  mobileSrc?: any;
   alt: string;
   price: string;
 }

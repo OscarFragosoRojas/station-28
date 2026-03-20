@@ -78,11 +78,19 @@ const PromoSlider = ({ promos }: PromoSliderProps) => {
                                 {promo.tag}
                             </div>
                         )}
-                        <img
-                            src={promo.src && typeof promo.src === 'object' ? promo.src.src : promo.src}
-                            alt={promo.alt || promo.title}
-                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-105"
-                        />
+                        <picture className="absolute inset-0 w-full h-full">
+                            {promo.mobileSrc && (
+                                <source 
+                                    media="(max-width: 767px)" 
+                                    srcSet={promo.mobileSrc && typeof promo.mobileSrc === 'object' ? promo.mobileSrc.src : promo.mobileSrc} 
+                                />
+                            )}
+                            <img
+                                src={promo.src && typeof promo.src === 'object' ? promo.src.src : promo.src}
+                                alt={promo.alt || promo.title}
+                                className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-105"
+                            />
+                        </picture>
                         <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-90 group-hover/card:opacity-100 transition-opacity duration-300" />
                         
                         <div className="absolute bottom-0 left-0 w-full p-6 sm:p-8 flex flex-col sm:flex-row sm:items-end justify-end sm:justify-between gap-3 sm:gap-4 h-full sm:h-auto">

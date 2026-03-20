@@ -16,7 +16,11 @@ import wings_kg from "../assets/images/wings_kg.png";
 import whatsapp from "../assets/images/whatsapp.png";
 import uberEats from "../assets/images/uberEats.png";
 import rappi from "../assets/images/rappi.png";
-import promo2 from "../assets/images/promo_station.png";
+import promo1 from "../assets/images/promo_1.png";
+import promo1_mobile from "../assets/images/promo_movil1.png";
+import promo2 from "../assets/images/promo_2.png";
+import promo2_mobile from "../assets/images/promo_movil2.png";
+
 
 export const menuItems: MenuSection[] = [
     {
@@ -163,10 +167,11 @@ export const promos: PromoSection[] = [
         name: "Hamburguesas",
         promos: [
             {
-                title: "",
+                title: "2 Combos Honda",
                 description: "Precio especial",
-                src: promo2,
-                alt: "Hamburguesa Honda",
+                src: promo1,
+                mobileSrc: promo1_mobile, // <-- Reemplaza 'promo1' por tu nueva imagen importada para celular (cuadrada)
+                alt: "Combo Honda",
                 tag: "Promo Martes",
                 price: "289",
             },
@@ -174,6 +179,7 @@ export const promos: PromoSection[] = [
                 title: "Kilo de Alitas",
                 description: "Precio especial",
                 src: promo2,
+                mobileSrc: promo2_mobile, // <-- Reemplaza 'promo2' por tu nueva imagen importada para celular (cuadrada)
                 alt: "Kilo de Alitas",
                 tag: "Promo Miercoles",
                 price: "299",
