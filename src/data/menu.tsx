@@ -82,7 +82,7 @@ export const menuItems: MenuSection[] = [
                 src: wings_10,
                 alt: "KawaWings",
                 tags: ["KawaWings", "Varios Sabores", "Papas Fritas"],
-                price: "199",
+                price: "185",
                 description: "10 piezas de alitas con lechuga, guarnición y aderezo. Además de papas fritas y eleccion de 2 salsas.",
             },
             {
