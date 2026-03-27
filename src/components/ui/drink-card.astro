@@ -1,0 +1,43 @@
+---
+const { src, alt, title, description, price } = Astro.props;
+---
+
+<div
+  class="group relative flex flex-col bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden transition-all duration-300 hover:border-moto-red hover:-translate-y-1 hover:shadow-[0_10px_30px_-10px_rgba(220,38,38,0.3)] h-full bg-gradient-to-b from-neutral-900 to-neutral-950"
+>
+  {src && (
+    <div
+      class="relative w-full aspect-[5/4] sm:aspect-[4/3] overflow-hidden bg-white/5 flex-shrink-0 flex items-center justify-center p-4 lg:p-6"
+    >
+      <img
+        class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-2xl"
+        src={src.src || src}
+        alt={alt || title}
+      />
+    </div>
+  )}
+
+  <div class="flex flex-col flex-grow p-6 lg:p-8">
+    <div class="mb-4 flex flex-col items-center gap-3 text-center">
+      <h4
+        class="text-2xl font-black uppercase italic tracking-tight text-moto-white group-hover:text-moto-red transition-colors duration-300"
+      >
+        {title}
+      </h4>
+      <div
+        class="bg-moto-red text-moto-white font-black italic px-4 py-1 rounded shadow-lg transform -rotate-2 border border-red-500/50 group-hover:scale-105 transition-transform text-xl"
+      >
+        ${price}
+      </div>
+    </div>
+
+    <p class="text-gray-400 text-sm leading-relaxed mb-6 text-center flex-grow">
+      {description}
+    </p>
+
+    <div
+      class="w-full h-px bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-auto"
+    >
+    </div>
+  </div>
+</div>

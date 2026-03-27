@@ -1,8 +1,8 @@
 export interface MenuItem {
   name: string;
-  subtitle: string;
-  src: any;
-  alt: string;
+  subtitle?: string;
+  src?: any;
+  alt?: string;
   tags?: string[];
   price: string;
   description: string;

@@ -20,6 +20,11 @@ import promo1 from "../assets/images/promo_1.png";
 import promo1_mobile from "../assets/images/promo_movil1.png";
 import promo2 from "../assets/images/promo_2.png";
 import promo2_mobile from "../assets/images/promo_movil2.png";
+import coca_cola from "../assets/images/coca_cola.png";
+import sprite from "../assets/images/sprite.png";
+import sidral from "../assets/images/sidral.png";
+import pepsi from "../assets/images/pepsi.png";
+import naranjada from "../assets/images/naranjada.png";
 
 
 export const menuItems: MenuSection[] = [
@@ -105,7 +110,7 @@ export const menuItems: MenuSection[] = [
                 src: cheese_sticks,
                 alt: "Suspensiones",
                 tags: ["Dedos de queso", "Ranch"],
-                price: "120",
+                price: "89",
                 description: "8 piezas de dedos de queso con lechuga y aderezo ranch.",
             },
             {
@@ -114,7 +119,7 @@ export const menuItems: MenuSection[] = [
                 src: onion_rings,
                 alt: "Discos",
                 tags: ["Aros de cebolla", "Ranch"],
-                price: "120",
+                price: "89",
                 description: "8 piezas de aros de cebolla con lechuga y aderezo ranch.",
             },
             {
@@ -141,8 +146,8 @@ export const menuItems: MenuSection[] = [
                 src: corn_ribs,
                 alt: "Costillas de elote",
                 tags: ["Elote", "Queso", "Crema"],
-                price: "120",
-                description: "Elote en trozos con queso, crema y aderezo.",
+                price: "145",
+                description: "Elote en trozos con bbq.",
             }
         ],
     },
@@ -150,14 +155,40 @@ export const menuItems: MenuSection[] = [
         name: "Llena el tanque",
         items: [
             {
-                name: "La Chopper",
-                subtitle: "Doble Carne",
-                src: burger1,
-                alt: "Hamburguesa Chopper",
-                tags: ["Chopper", "Doble Carne", "Queso Cheddar", "Tocino", "Salsa BBQ"],
-                price: "120",
-                description: "Doble carne, queso cheddar, tocino crujiente y salsa BBQ casera.",
+                name: "Coca-Cola",
+                src: coca_cola,
+                alt: "Coca-Cola",
+                price: "30",
+                description: "Refresco de 600ml.",
             },
+            {
+                name: "Sprite",
+                src: sprite,
+                alt: "Sprite",
+                price: "30",
+                description: "Refresco de 600ml.",
+            },
+            {
+                name: "Sidral Mundet",
+                src: sidral,
+                alt: "Sidral Mundet",
+                price: "30",
+                description: "Refresco de 600ml.",
+            },
+            {
+                name: "Pepsi",
+                src: pepsi,
+                alt: "Pepsi",
+                price: "30",
+                description: "Refresco de 600ml.",
+            },
+            {
+                name: "Naranjada",
+                src: naranjada,
+                alt: "Naranjada",
+                price: "30",
+                description: "Refresco de 600ml.",
+            }
         ],
     }
 ]
@@ -170,7 +201,7 @@ export const promos: PromoSection[] = [
                 title: "2 Combos Honda",
                 description: "Precio especial",
                 src: promo1,
-                mobileSrc: promo1_mobile, // <-- Reemplaza 'promo1' por tu nueva imagen importada para celular (cuadrada)
+                mobileSrc: promo1_mobile,
                 alt: "Combo Honda",
                 tag: "Promo Martes",
                 price: "289",
@@ -179,7 +210,7 @@ export const promos: PromoSection[] = [
                 title: "Kilo de Alitas",
                 description: "Precio especial",
                 src: promo2,
-                mobileSrc: promo2_mobile, // <-- Reemplaza 'promo2' por tu nueva imagen importada para celular (cuadrada)
+                mobileSrc: promo2_mobile,
                 alt: "Kilo de Alitas",
                 tag: "Promo Miercoles",
                 price: "299",
